@@ -11,7 +11,7 @@ Check your IP address details easily
 ## What is this?<a name="What"/>
 This is a simple web app for get your current IP stats. 
 
-<img src="img/screenshot_a.JPG" width="600" height="300">
+<img src="img/screenshot_a.JPG">
 
 ## For why?<a name="why"/>
 By using this web app you can get your, 
