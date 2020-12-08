@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>What is my IP?</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--===============================================================================================-->
+</head>
+
+<body>
+    <h1>What is my IP?</h1>
+    <div class="wrap">
+        <div id="ip">Loading.........</div>
+        <div id="city">Loading.........</div>
+        <div id="region">Loading.........</div>
+        <div id="country">Loading.........</div>
+        <div id="loc">Loading.........</div>
+        <div id="org">Loading.........</div>
+    </div>
+    <button class="btn btn btn-dark" type="submit" onClick="refreshPage()">Check Again</button>
+
+    <script type="text/javascript " src="https://code.jquery.com/jquery-latest.min.js "></script>
+    <script type="text/javascript ">
+        $.get('https://ipinfo.io/', function(response) {
+            $("#ip ").html('IP : <b>' + response.ip + '</b>');
+            $("#city ").html('City : <b>' + response.city + '</b>');
+            $("#region ").html('Region : <b>' + response.region + '</b>');
+            $("#country ").html('Country : <b>' + response.country + '</b>');
+            $("#loc ").html('Location : <b>' + response.loc + '</b>');
+            $("#org ").html('Organization : <b>' + response.org + '</b>');
+        }, 'jsonp');
+
+        function refreshPage() {
+            window.location.reload();
+        }
+    </script>
+
+
+    <!--===============================================================================================-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js "></script>
+    <!--===============================================================================================-->
+    <script src="script.js "></script>
+    <!--===============================================================================================-->
+</body>
+
+</html>
